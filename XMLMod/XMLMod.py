@@ -2,10 +2,20 @@ import xml.etree.ElementTree as ET
 import os
 import zipfile
 
+def readMesh(filename):
+    print("Processing "+filename)
+    tree = ET.parse(filename)
+    root = tree.getroot()
+
+
+# Read files in an archive
 def readArchive(filename):
+    count=0
     with zipfile.ZipFile(filename) as z:
         for filename in z.namelist():
-            print filename
+            if filename.endswith(".xmf"):
+              count+=1  
+              readMesh(filename)
 
 def parse(heatmap_dump,filename):
 
@@ -37,7 +47,26 @@ def parse(heatmap_dump,filename):
     return heatmap_dump
 
 
-readArchive('bd.chkn')
+#readArchive('bd.chkn')
+archive = zipfile.ZipFile('bd.chkn', 'r')
+mesh=archive.read('50.xmf')
+#print(mesh)
+'''
+tree = ET.parse('xmltest.ki')
+root = tree.getroot()
+print(root.tag)
+'''
+'''
+with open('50.xmf', 'r') as f:
+    first_line = f.readline()
+    print (first_line)
+'''
+text=''
+with open('50.xmf') as f:
+    text=f.readlines()
+print(type(text))
+print(text)
+#Try to read the mesh without the header -> IT is messing up the element Tree 
 
 '''
 with zipfile.ZipFile('bd.chkn') as z:
