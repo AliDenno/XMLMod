@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>188b17c9-9d31-4bcd-9388-699113b01c2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>XMLMod.py</StartupFile>
+    <StartupFile>Decrypt.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Decrypt.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="XMLMod.py" />
   </ItemGroup>
   <PropertyGroup>
