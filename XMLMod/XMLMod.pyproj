@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>188b17c9-9d31-4bcd-9388-699113b01c2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Decrypt.py</StartupFile>
+    <StartupFile>XMLMod.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

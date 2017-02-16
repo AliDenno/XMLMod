@@ -19,7 +19,7 @@ namespace XMLModC
                 { 
                     Console.WriteLine(entry.Name);
                     //entry.ExtractToFile(entry.Name);
-                    Console.WriteLine(entry.Open());
+                    //Console.WriteLine(entry.Open());
                   
                 }
             }
@@ -36,6 +36,7 @@ namespace XMLModC
             string headlessXml = @"C:\Users\ali-d\Desktop\Programming\XMLMod\XMLModC\XMLModC\50 - Headless.xmf";
             string headfullXml = @"C:\Users\ali-d\Desktop\Programming\XMLMod\XMLModC\XMLModC\50.xmf";
             string chknfile = @"C:\Users\ali-d\Desktop\Programming\XMLMod\XMLModC\XMLModC\zippi.chkn";
+            string EXXml = @"C:\Users\ali-d\Desktop\Programming\XMLMod\XMLModC\XMLModC\T.xml";
             Program obj = new Program();
             //xmldocument doc = new xmldocument();
             //doc.load(headlessxml);
@@ -47,20 +48,20 @@ namespace XMLModC
             //doc.LoadXml(XML);
 
             // STEP 1
-            obj.readArchive(chknfile);
+           // obj.readArchive(chknfile);
 
-            /*
+            
             // STEP 2 
-            string XML = obj.getXml(System.IO.File.ReadAllText(headfullXml), "<MESH", "/MESH>");
-
-            XElement xelement = XElement.Parse(XML);
-            IEnumerable<XElement> employees = xelement.Elements();
+            //string XML = obj.getXml(System.IO.File.ReadAllText(headfullXml), "<MESH", "/MESH>");
+            
+            XElement xelement = XElement.Parse(EXXml);
+           // IEnumerable<XElement> employees = xelement.Elements();
             // Read the entire XML
+            /*
             foreach (var employee in employees)
             {
                 Console.WriteLine(employee);
-            }
-            */
+            }*/
         }
     }
 }

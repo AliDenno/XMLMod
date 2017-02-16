@@ -64,8 +64,8 @@ with open('50.xmf', 'r') as f:
 text=''
 with open('50.xmf') as f:
     text=f.readlines()
-print(type(text))
-print(text)
+#print(type(text))
+#print(text)
 #Try to read the mesh without the header -> IT is messing up the element Tree 
 
 '''
@@ -79,7 +79,27 @@ with zipfile.ZipFile('bd.chkn') as z:
 '''
 
 
-'''
-tree = ET.parse('country_data.xml')
+
+tree = ET.parse('T.xml')
 root = tree.getroot()
+#print(len(root[0]))
+print(root[0][1].tag)
+
+count =0
+for i in root[0]:
+    if(i.tag=="VERTEX"):
+        Val=i[0].text.split()
+        Val[1]=float(Val[1])+500
+        i[0].text=str((float(Val[0])+500))+" "+str((float(Val[1])+500))+" "+str((float(Val[2])+500))
+        #print(i.tag," ",i[0].text.split())
+tree.write('T2.xml')
+
 '''
+for i in range(0,len(root[0])-1):
+
+    if (root[0][1].tag=="VERTEX"):
+        print(root[0][i][0].text.split())
+    else:
+        break
+'''
+#
