@@ -77,14 +77,23 @@ with zipfile.ZipFile('bd.chkn') as z:
                 for line in f:
                     print line
 '''
+import time
 
 
-
-tree = ET.parse('T.xml')
+tree = ET.parse('NewTestCase.xmf')
 root = tree.getroot()
 #print(len(root[0]))
-print(root[0][1].tag)
+#print(root[0][1].tag)
 
+for i in root:
+    for j in i:
+        #print (j.tag)
+        if(j.tag=="VERTEX"):
+            Val=j[0].text.split()
+            j[0].text=str((float(Val[0])))+" "+str((float(Val[1])))+" "+str((float(Val[2])+5000))
+tree.write('T2.xml')
+print("done")
+time.sleep(5)
 count =0
 for i in root[0]:
     if(i.tag=="VERTEX"):

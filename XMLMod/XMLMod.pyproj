@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>188b17c9-9d31-4bcd-9388-699113b01c2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>XMLMod.py</StartupFile>
+    <StartupFile>AxisModifier.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,10 +22,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AxisModifier.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Decrypt.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="XMLMod.py" />
+    <Compile Include="Experiments.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
