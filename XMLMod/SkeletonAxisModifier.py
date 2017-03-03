@@ -10,7 +10,7 @@ def alterAxis(FileName):
     for j in root:
         if(j.tag=="BONE"):
             Val=j[0].text.split()
-            j[0].text=str((float(Val[0])))+" "+str((float(Val[1])+10))+" "+str((float(Val[2])))
+            j[0].text=str((float(Val[0])))+" "+str((float(Val[1])))+" "+str((float(Val[2])))
     tree.write("New/"+FileName)
     try:
         os.remove('NEW/Headless_'+FileName)
@@ -18,7 +18,7 @@ def alterAxis(FileName):
         pass
     Op.writeHeadFullFile(FileName)
 
-FileName='44_43.xsf'
+FileName='0CD2l.xsf'
 content=Op.readHeadfullFile(FileName)
 Op.writeHeadlessFile(content,FileName)
 alterAxis(FileName)
