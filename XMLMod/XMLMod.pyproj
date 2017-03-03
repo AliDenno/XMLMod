@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>188b17c9-9d31-4bcd-9388-699113b01c2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>SkeletonAxisModifier.py</StartupFile>
+    <StartupFile>MeshAxisModifier.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,6 +32,9 @@
     <Compile Include="SkeletonAxisModifier.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OperationFiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
