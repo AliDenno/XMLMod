@@ -2,24 +2,7 @@ import xml.etree.ElementTree as ET
 import os
 import zipfile
 import time
-
-def showFile(file):
-    for line in file:
-        print(line)
-
-def readHeadfullFile(FileName):
-    with open(FileName) as f:
-        content = f.readlines()
-    global Header
-    Header = content[0]
-    content[0] = ""
-    return content
-
-def writeHeadlessFile(content,FileName):
-    thefile = open('NEW/Headless_'+FileName, 'w')
-    for item in content:
-        thefile.write("%s" % item)
-    thefile.close()
+import ChknOperations as Op
 
 def alterAxis(FileName):    
     tree = ET.parse('NEW/Headless_'+FileName)
@@ -35,24 +18,10 @@ def alterAxis(FileName):
         os.remove('NEW/Headless_'+FileName)
     except OSError:
         pass
-    writeHeadFullFile(FileName)
-
-def writeHeadFullFile(FileName):
-    with open('NEW/'+FileName) as f:
-        content = f.readlines()
-    content=[Header]+content
-    try:
-        os.remove('NEW/'+FileName)
-    except OSError:
-        pass
-    thefile = open('NEW/'+FileName, 'w')
-    for item in content:
-        thefile.write("%s" % item)
-    thefile.close()
-    
+    Op.writeHeadFullFile(FileName)
 
 FileName='93742.xmf'
-content=readHeadfullFile(FileName)
-writeHeadlessFile(content,FileName)
+content=Op.readHeadfullFile(FileName)
+Op.writeHeadlessFile(content,FileName)
 alterAxis(FileName)
 print("done")

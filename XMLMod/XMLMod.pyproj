@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>188b17c9-9d31-4bcd-9388-699113b01c2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MeshAxisModifier.py</StartupFile>
+    <StartupFile>SkeletonAxisModifier.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,10 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ChknOperations.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MeshAxisModifier.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Experiments.py" />
+    <Compile Include="SkeletonAxisModifier.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
