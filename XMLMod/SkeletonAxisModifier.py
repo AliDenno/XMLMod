@@ -18,7 +18,7 @@ def alterAxis(FileName):
         pass
     Op.writeHeadFullFile(FileName)
 
-FileName='0CD2l.xsf'
+FileName='Ebzz9.xsf'
 content=Op.readHeadfullFile(FileName)
 Op.writeHeadlessFile(content,FileName)
 alterAxis(FileName)

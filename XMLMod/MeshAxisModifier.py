@@ -19,14 +19,14 @@ def alterAxis(FileName):
     except OSError:
         pass
     Op.writeHeadFullFile(FileName)
-
-FileName='eq4Wv.XMF'
+'''
+FileName='tfKKu.XMF'
 content=Op.readHeadfullFile(FileName)
 Op.writeHeadlessFile(content,FileName)
 alterAxis(FileName)
 print("done")
-
 '''
+
 files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith(".xmf")]
 for i in files:
     FileName=i
@@ -35,4 +35,3 @@ for i in files:
     Op.writeHeadlessFile(content,FileName)
     alterAxis(FileName)
     print("done")
-'''
